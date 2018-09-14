@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80515332-3"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-80515332-3');
+		</script>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="screen" href="http://vjs.zencdn.net/5.4.6/video-js.min.css">
+    <link rel="stylesheet" media="screen" href="vsg-skin.css">
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="font-awesome-animation.min.css">
+		<link href="js/lightbox/css/lightbox.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lobster|Roboto|Anton|Josefin+Sans|Lato|Oswald|Roboto+Condensed" rel="stylesheet">
+		<title>Radio Agregator</title>
+	</head>
+  <body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 header">
+				<a href="index.html"></a>
+			</div>
+		</div>
+		
+
+		<div class="row blocks">
+			<div class="col-lg-3 col-sm-6 col-xs-12 gray-bg1"><a onclick="narodni()"><p><img src="radioIcons/narodni.png" class="ele2"></img></a></p></div>
+			<div class="col-lg-3 col-sm-6 col-xs-12 gray-bg2"><a target="_blank" onclick="play()"><p><img src="radioIcons/otvoreni.png" class="ele2"></img></a></p></div>
+			<div class="col-lg-3 col-sm-6 col-xs-12 gray-bg3"><a onclick='playRadio()'><p><img src="radioIcons/antena.png" class="ele2"></img></a></p></div>
+			<div class="col-lg-3 col-sm-6 col-xs-12 gray-bg4"><a target="_blank" href="http://live.antenazagreb.hr:8000/;stream/1"><p><img src="radioIcons/hrt.png" class="ele2"></img></a></p></div>
+
+			<div class="col-lg-3 col-sm-6 col-xs-12 gray-bg5"><a target="_blank" href="https://www.linkedin.com/in/juraj-raku%C5%A1a-28094513b/"><p><img src="radioIcons/dalmacija.png" class="ele2"></img></a></p></div>
+			<div class="col-lg-3 col-sm-6 col-xs-12 gray-bg6"><a target="_blank" href="https://plus.google.com/u/0/117070206124819979447"><p><img src="radioIcons/enter.png" class="ele2"></img></a></p></div>
+			<div class="col-lg-3 col-sm-6 col-xs-12 gray-bg7"><a target="_blank" href="http://steamcommunity.com/id/jura000"><p><img src="radioIcons/narodni.png" class="ele2"></img></a></p></div>
+			<div class="col-lg-3 col-sm-6 col-xs-12 gray-bg8"><a target="_blank" href="https://www.flickr.com/photos/jura000/"><p><img src="radioIcons/narodni.png" class="ele2"></img></a></p></div>
+		</div>
+		
+<div class="row filler"></div>
+<div class="row about">
+
+<!-- AUDIO PLAYER -->
+
+			<div class="col-sm-6 col-xs-12">
+
+					<div class='player'>
+						<audio id="player" controls="controls">
+							<source id="stanica" src="http://50.7.77.114:8495/;stream/1" type="audio/mp3"/>
+								Your browser does not support the audio element.
+						</audio>
+
+					<img id="rlogo" src="radioIcons/narodni.png"/>
+					<div class='info'>
+						<div class="ime">Narodni Radio</div>
+						<div class="pjesma"><p data-shoutcast-value="songtitle"></p></div>
+					</div>
+					<a href="#" onclick="play()"><img src="radioIcons/play.jpg"></img></a>
+				<div class="gumb">
+					
+				</div>
+					</div> 
+			</div>
+			
+			<div class="col-sm-6 col-xs-12 about-text">
+				
+			</div>
+			
+			
+			
+			
+		</div>		
+	</div>
+	
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/lightbox/js/lightbox.js"></script>
+	<script>
+	function myFunction() {
+    var x = document.getElementById("menu");
+    if (x.className === "main-menu") {
+        x.className += " responsive";
+    } else {
+        x.className = "main-menu";
+    }
+}
+
+function narodni(){
+	document.getElementById("stanica").setAttribute("src", "http://live.narodni.hr:8059/;stream/1");
+}
+
+
+
+
+
+	</script>
+	<script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"><\/script>')</script>
+	<script src="http://240891823.r.professionalcdn.com/jquery.shoutcast.easy.min.js?host=live.antenazagreb.hr&port=8000&stream=1"></script>
+  </body>
+</html>
